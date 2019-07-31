@@ -39,7 +39,7 @@ public class TranDaoTest {
         logger.info("————————————————————————");
         logger.info("测试开始");
         SqlSessionFactory factory = SqlSessionFactory.build("jdbc");
-        TranDao dao = (TranDao) factory.openSession().getMapper(TranDao.class);
+        TranDao dao = factory.openSession().getMapper(TranDao.class);
         TranHistory history = new TranHistory();
         history.setId("5299b62d2d7f48c1acf9f9a4b3bcad75");
         history.setStage("05提案/报价");

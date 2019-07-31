@@ -3,9 +3,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/Gmbatis" />
-  </component>
+  <component name="FrameworkDetectionExcludesConfiguration" detection-enabled="false" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>

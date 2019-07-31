@@ -62,8 +62,8 @@ public class SqlSession {
     /**
      * 获得dao层接口的代理实现类
      */
-    public Object getMapper(Class tClass) {
-        return configuration.getMapper(tClass, this);
+    public <T> T getMapper(Class<T> tClass) {
+        return (T) configuration.getMapper(tClass, this);
     }
 
     /**

@@ -147,7 +147,6 @@ public abstract class AbstractExecutor {
      *
      * @param method     执行方法
      * @param args       参数
-     * @param autoCommit 是否要自动提交
      * @return 查询结果
      */
     protected abstract Object defaultSelect(Method method, Object[] args);

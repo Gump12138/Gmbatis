@@ -43,8 +43,6 @@ public class SqlHandle {
      */
     public SqlHandle(Configuration configuration) {
         logger = LoggerFactory.getLogger(this.getClass());
-        logger.info("————————————————————————");
-        logger.info("处理Sql语句");
         this.setSql(new StringBuilder());
         this.setMapper(configuration.getTableMapper());
     }
@@ -57,6 +55,8 @@ public class SqlHandle {
      * @return 返回包含占位符的sql语句或完整sql语句
      */
     public String handleSql(Method method, Object[] args) {
+        logger.info("————————————————————————");
+        logger.info("处理Sql语句");
         try {
             Annotation annotation = method.getDeclaredAnnotations()[0];
             String annotationName = annotation.annotationType().getSimpleName().toLowerCase();

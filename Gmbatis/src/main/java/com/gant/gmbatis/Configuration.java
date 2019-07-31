@@ -42,8 +42,8 @@ public class Configuration {
      */
     public Configuration(String driver, String url, String username, String password) {
         logger = LoggerFactory.getLogger(this.getClass());
-        setDataSourceInfoMapper(driver, url, username, password)
-                .setTableMapper();
+        this.setDataSourceInfoMapper(driver, url, username, password);
+        this.setTableMapper();
     }
 
     /**
@@ -55,7 +55,7 @@ public class Configuration {
      */
     public Object getMapper(Class tClass, SqlSession sqlSession) {
         logger.info("————————————————————————");
-        logger.info("开始获取dao层接口的代理实现类");
+        logger.info("获取dao层接口的代理实现类");
         return MapperProxyFactory.newInstance(tClass, sqlSession);
     }
 
